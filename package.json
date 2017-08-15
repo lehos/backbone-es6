@@ -1,0 +1,20 @@
+{
+  "name": "backbone-es6",
+  "version": "1.0.0",
+  "description": "backbone with es6 classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexey Stratan",
+  "license": "WTFPL",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "jquery": "^3.2.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "webpack": "^3.5.4"
+  }
+}
