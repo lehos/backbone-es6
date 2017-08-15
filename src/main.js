@@ -1,16 +1,9 @@
-let template = `
-    <select class="test-change">
-        <option value="1">1</option>
-        <option value="2">2</option>
-    </select>
-    <button class="test-click">click me</button>
-`
+let template = `<button class="test-click">click me</button>`
 
 class ConstructorBased extends Backbone.View {
     constructor() {
         super({
             events: {
-                'change .test-change': 'testChange',
                 'click .test-click': 'testClick',
             }
         })
@@ -36,7 +29,6 @@ class ConstructorBased extends Backbone.View {
 class InitializeBased extends Backbone.View {
     get events() {
         return {
-            'change .test-change': 'testChange',
             'click .test-click': 'testClick',
         }
     }
@@ -61,11 +53,10 @@ class InitializeBased extends Backbone.View {
     }
 }
 
-let Classic = Backbone.View.extend({
+let ClassicApproach = Backbone.View.extend({
     template: template,
     el: '#app3',
     events: {
-        'change .test-change': 'testChange',
         'click .test-click': 'testClick',
     },
 
@@ -88,4 +79,4 @@ let Classic = Backbone.View.extend({
 
 let app1 = new ConstructorBased({})
 let app2 = new InitializeBased({})
-let app3 = new Classic()
+let app3 = new ClassicApproach()
